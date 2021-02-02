@@ -26,16 +26,18 @@ spring:
                 name: department-service
                 fallbackuri: forward:/departmentServiceFallback
 
+
 hystrix:
   command:
     fallbackcmd:
       execution:
         isolation:
           thread:
-            timeoutInMillisecods: 4000
+            timeoutInMilliseconds: 4000
+
 
 management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream, health
+        include: hystrix.stream
