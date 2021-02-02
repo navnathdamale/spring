@@ -24,9 +24,8 @@ public class UserController {
 
     @GetMapping("/{id}")
     public ResponseTemplateDTO getUserWithDepartment(@PathVariable("id") Long userId) {
+        log.info("Inside getUserWithDepartment of UserController");
         return userService.getUserWithDepartment(userId);
-
-
     }
 
 }
