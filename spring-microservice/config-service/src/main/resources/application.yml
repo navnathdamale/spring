@@ -1,0 +1,12 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/navnathdamale/config-server
+          clone-on-start: true
